@@ -6,6 +6,11 @@
     --text-main: #ffffff;
     --text-dim: #94a3b8; /* Slate gray */
     --yt-red: #ff0000;
+    --fb-blue: #1877F2;
+    --ig-gradient: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2397 75%, #ad24ad 100%);
+    --x-black: #000000;
+    --linktree-green: #43E660;
+    --web-blue: #0ea5e9;
     --play-blue: #3bccff;
     --play-green: #48ff48;
     --play-yellow: #ffeb3b;
@@ -89,7 +94,9 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 24px;
-    flex-grow: 1; /* Allows container to take up available space */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -136,6 +143,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
+    margin-bottom: 80px;
 }
 
 .card {
@@ -192,7 +200,7 @@ h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.game-color { color: var(--secondary-glow); } /* Specific color for game icon */
+.game-color { color: var(--secondary-glow); }
 
 
 .card:hover .icon-box {
@@ -258,60 +266,81 @@ h1 {
     border-color: var(--primary-glow);
 }
 
-.policy-content h1 {
-    font-size: clamp(2rem, 6vw, 3rem);
-    margin-bottom: 20px;
-    background: linear-gradient(to right, #fff, var(--primary-glow));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.policy-content .last-updated {
-    color: var(--text-dim);
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-    display: block;
-}
-
-.policy-content h2 {
-    margin: 40px 0 20px;
-    color: #fff;
-    font-size: 1.8rem;
-    border-bottom: 2px solid rgba(255,255,255,0.1);
-    padding-bottom: 10px;
-}
-.policy-content p {
-    color: var(--text-dim);
-    line-height: 1.8;
-    margin-bottom: 20px;
-    font-size: 1.05rem;
-}
-
+/* --- Footer Styles --- */
 footer {
     text-align: center;
-    padding: 80px 0 40px;
+    padding: 80px 24px;
+    margin-top: auto;
+    border-top: 1px solid var(--border-glass);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(20px);
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.contact-box h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    font-weight: 800;
+}
+
+.social-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 60px; height: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white; /* Icon remains white */
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-10px) scale(1.15);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    filter: brightness(1.1);
+    color: white;
+}
+
+/* Colorful Icon Backgrounds by Default */
+.icon-yt { background: #ff0000; }
+.icon-fb { background: #1877f2; }
+.icon-ig { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2397 75%, #ad24ad 100%); }
+.icon-x { background: #000000; } /* Keep black for official X look, but icon must show */
+.icon-linktree { background: #43E660; color: black !important; }
+.icon-web { background: #0ea5e9; }
+
+.copyright {
     color: var(--text-dim);
     font-size: 0.9rem;
-    margin-top: auto; /* Pushes footer to the bottom */
+    border-top: 1px solid var(--border-glass);
+    padding-top: 30px;
+    width: 100%;
 }
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .cursor-dot, .cursor-outline { display: none; }
     body { cursor: auto; }
-    .container { padding: 40px 15px; }
-    header { margin-bottom: 40px; }
-    .brand-logo { width: 100px; height: 100px; }
-    h1 { font-size: clamp(2rem, 10vw, 3.5rem); }
-    .subtitle { font-size: 1rem; }
-    .grid { grid-template-columns: 1fr; }
-    .card { padding: 30px; border-radius: 30px; }
-    .icon-box { width: 60px; height: 60px; font-size: 1.8rem; }
-    .card h3 { font-size: 1.5rem; }
-    .policy-container { padding: 30px; margin: 20px 15px; border-radius: 30px; }
-    .back-link { margin-bottom: 30px; }
-    .policy-content h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
-    .policy-content h2 { font-size: 1.5rem; }
-    .policy-content p { font-size: 1rem; }
-    footer { padding: 40px 0 20px; }
 }
