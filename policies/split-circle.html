@@ -163,11 +163,11 @@
             <div class="policy-content" style="text-align: center; margin-bottom: 50px;">
                 <img src="../assets/logo/Split Circle Logo.jpeg" alt="Split Circle Logo" style="width: 120px; height: 120px; border-radius: 30px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 <h1>Split Circle Privacy Policy</h1>
-                <span class="last-updated">Last Updated: September 25, 2026</span>
+                <span class="last-updated">Last Updated: October 3, 2026</span>
             </div>
 
             <div class="policy-content">
-                <p><strong>Split Circle</strong> is an app for sharing expenses with friends, family and groups, made by <strong>The Tech Express</strong> ("we", "us"). This policy explains what the app collects, why it collects it, who can see it, how long it is kept and how to delete it. It covers the Split Circle Android app and its Wear OS watch app.</p>
+                <p><strong>Split Circle</strong> is an app for sharing expenses with friends, family and groups, made by <strong>The Tech Express</strong> ("we", "us"). This policy explains what the app collects, why it collects it, who can see it, how long it is kept and how to delete it. It covers the Split Circle apps for Android and iPhone, and the Wear OS watch app.</p>
 
                 <h2 style="margin-top: 1rem;">The short version</h2>
                 <div class="summary-grid">
@@ -183,8 +183,8 @@
                     </div>
                     <div class="summary-card">
                         <i class="fas fa-receipt"></i>
-                        <h4>Receipts stay on your phone</h4>
-                        <p>Receipt photos are read on your phone. They are never uploaded, and the app doesn't keep them.</p>
+                        <h4>Receipt photos aren't kept</h4>
+                        <p>A receipt you scan is read by an AI model and then discarded. Neither the app nor our server keeps the photo.</p>
                     </div>
                     <div class="summary-card">
                         <i class="fas fa-users"></i>
@@ -225,7 +225,7 @@
                     <h2>1. Information we collect</h2>
 
                     <h3><i class="fas fa-user-circle"></i> Your account</h3>
-                    <p>You sign in with your Google account. We receive your <strong>name, email address and profile picture</strong>, and Firebase Authentication gives your account a <strong>user ID</strong>. We never see your Google password.</p>
+                    <p>You sign in with your Google account or your Apple ID, on either app. From Google we receive your <strong>name, email address and profile picture</strong>; from Apple, your <strong>name and email address</strong>, which can be a private relay address if you choose "Hide My Email". Firebase Authentication gives your account a <strong>user ID</strong>. If you connect both ways of signing in, both lead to the same account. We never see your Google or Apple password.</p>
 
                     <h3><i class="fas fa-wallet"></i> What you add</h3>
                     <ul>
@@ -246,7 +246,7 @@
                     <p>For each day, we record <strong>how many questions you asked</strong> the assistant and roughly what they cost to answer. That's how the daily limit works. The text of your questions and answers is not stored.</p>
 
                     <h3><i class="fas fa-stethoscope"></i> Diagnostic logs</h3>
-                    <p>The app keeps a short record of what it did, such as which screen opened, whether a sync or upload worked, the type of any error, and how long things took. It sends these records with the <strong>app version, device make and model, Android version, a random ID for that app session, and your user ID</strong>, so we can trace a problem you report. They're deleted automatically after 30 days.</p>
+                    <p>The app keeps a short record of what it did, such as which screen opened, whether a sync or upload worked, the type of any error, and how long things took. It sends these records with the <strong>app version, device make and model, Android or iOS version, a random ID for that app session, and your user ID</strong>, so we can trace a problem you report. They're deleted automatically after 30 days.</p>
                     <div class="note"><i class="fas fa-shield-halved"></i>&nbsp; These logs never include names, email addresses, amounts, expense titles or anything you type. As an extra safeguard, anything that looks like an email address or a long number is masked on your phone before it's sent.</div>
 
                     <h3><i class="fab fa-google-play"></i> Play Store install referrer</h3>
@@ -256,8 +256,7 @@
                 <section id="on-device">
                     <h2>2. What stays on your phone</h2>
                     <ul>
-                        <li><strong>Receipt photos.</strong> Receipts are scanned and read on your phone by Google's ML Kit (the document scanner and text recognition). The photo is deleted from the app as soon as it's read. Only the items and amounts you choose to save become an expense. Google may receive anonymous performance and usage figures from these ML Kit tools, but never your photos.</li>
-                        <li><strong>A copy of your data for offline use</strong>, in the app's private storage. It isn't included in Android device backups.</li>
+                        <li><strong>A copy of your data for offline use</strong>, in the app's private storage. It isn't included in Android device backups, and on iPhone it's kept in the app's own storage.</li>
                         <li><strong>PDF reports</strong> you export are made on your phone and go only where you choose to share them.</li>
                         <li><strong>Daily reminders</strong> are scheduled on your phone.</li>
                         <li><strong>Your watch.</strong> The phone sends your balances and recent activity to your paired watch over the Wear OS connection, not through our servers.</li>
@@ -270,6 +269,7 @@
                         <li>To run the app: signing you in, syncing across your devices, sharing expenses with your groups and working out balances.</li>
                         <li>To notify you about activity in your groups and send your daily reminder.</li>
                         <li>To answer your questions to the assistant, when you ask one.</li>
+                        <li>To read a receipt you scan, when you scan one.</li>
                         <li>To find and fix problems, keep the service secure, and enforce fair-use limits.</li>
                     </ul>
                     <p>We don't use your information for advertising, we don't sell it, and we don't build profiles of you.</p>
@@ -295,8 +295,8 @@
                             </thead>
                             <tbody>
                                 <tr><td>Google Firebase and Google Cloud</td><td>Sign-in (Firebase Authentication), the database (Cloud Firestore), server functions (Cloud Functions), notifications (Firebase Cloud Messaging) and diagnostic logs (Cloud Logging)</td></tr>
-                                <tr><td>Google Play services</td><td>The on-device document scanner and the Play Store install referrer</td></tr>
-                                <tr><td>OpenRouter, and the AI model host it uses</td><td>Answering assistant questions, only when you ask one. See <a href="#assistant">section 5</a>.</td></tr>
+                                <tr><td>Google Play services (Android)</td><td>The on-device document scanner, which finds and straightens the bill in the camera, and the Play Store install referrer</td></tr>
+                                <tr><td>OpenRouter, and the AI model hosts it uses</td><td>Answering assistant questions and reading receipts you scan, only when you do. See <a href="#assistant">section 5</a>.</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -314,6 +314,15 @@
                     </ul>
                     <p>OpenRouter passes this to the company hosting the AI model, currently Meta's Llama 3.1 8B, which writes the answer. Both handle the request under their own privacy terms. <strong>We don't store your questions or the answers on our servers.</strong> We keep only the daily count described above.</p>
                     <div class="note"><i class="fas fa-circle-info"></i>&nbsp; The summary includes your friends' names as they appear in your groups. Please don't type sensitive details, such as bank or card numbers, into the chat.</div>
+
+                    <h3 id="receipts"><i class="fas fa-receipt"></i> Reading receipts</h3>
+                    <p>When you scan a receipt, the app shrinks the photo and sends it to our server, which passes it to <strong>OpenRouter</strong>. OpenRouter passes it to the company hosting the AI model, currently Google's Gemini 3.1 Flash Lite, which reads the shop name, the items and prices, the tax and the total. Both handle the request under their own privacy terms.</p>
+                    <ul>
+                        <li>Only the photo is sent: nothing about your account, your groups or other people.</li>
+                        <li><strong>We don't store the photo or what was read from it on our servers</strong>, and the app deletes its copy as soon as it's read. Only the items and amounts you choose to save become an expense.</li>
+                        <li>We keep a daily count of scans, to limit each account to 20 a day.</li>
+                    </ul>
+                    <div class="note"><i class="fas fa-circle-info"></i>&nbsp; A receipt can show a card's last digits or a phone number. If you'd rather that wasn't sent, add the items yourself instead of scanning.</div>
                 </section>
 
                 <section id="storage">
@@ -322,7 +331,7 @@
                         <li><strong>Location:</strong> your groups, expenses and account records are stored in Google Cloud Firestore in <strong>Mumbai, India</strong>. Sign-in, notifications and diagnostic logs use Google's global services, so that data may also be processed outside India.</li>
                         <li><strong>Encryption:</strong> data is encrypted in transit (HTTPS/TLS) and at rest.</li>
                         <li><strong>Access rules:</strong> the database rules on our server allow each record to be read only by the people it belongs to. The list of users can't be browsed, and usage counters can only be changed by our server.</li>
-                        <li><strong>Keys:</strong> the key for the AI service is kept on our server and is never built into the app.</li>
+                        <li><strong>Keys:</strong> the key for the AI service, used by the assistant and for reading receipts, is kept on our server and is never built into the app.</li>
                     </ul>
                     <p>No system is perfectly secure. If you find a security problem, please <a href="#contact">tell us</a>.</p>
                 </section>
@@ -339,6 +348,7 @@
                                 <tr><td>Invites</td><td>Accepted, declined, cancelled or expired. Invites you created are cancelled when you delete your account.</td></tr>
                                 <tr><td>Notification token</td><td>You sign out or delete your account</td></tr>
                                 <tr><td>Daily assistant counts</td><td>You delete your account</td></tr>
+                                <tr><td>Daily receipt-scan counts</td><td>You delete your account</td></tr>
                                 <tr><td>Diagnostic logs</td><td>Deleted automatically after <strong>30 days</strong></td></tr>
                                 <tr><td>Database recovery copies</td><td>Up to <strong>7 days</strong>. Anything deleted is gone from these within 7 days.</td></tr>
                                 <tr><td>Data on your phone</td><td>You clear the app's storage or uninstall it</td></tr>
@@ -351,7 +361,7 @@
                     <h2>8. Deleting your account</h2>
                     <p>In the app, go to <strong>Account → Delete account</strong>. This:</p>
                     <ul>
-                        <li>Erases your sign-in, profile, private records and settings, daily assistant counts, notification tokens, email fingerprint, and the invites you created.</li>
+                        <li>Erases your sign-in, profile, private records and settings, daily assistant and receipt-scan counts, notification tokens, email fingerprint, and the invites you created. If you sign in with Apple and delete your account from an iPhone, Split Circle also tells Apple to revoke its access to your Apple ID; from Android, you can remove it at appleid.apple.com → Sign in with Apple.</li>
                         <li>Replaces your name and picture with <strong>"Deleted user"</strong> in the groups you were part of. The expenses and payments you shared with other people remain, because their balances depend on them.</li>
                     </ul>
                     <p>You can also delete single expenses, leave a group, or delete a group you created. If you can't get into the app, <a href="#contact">contact us</a> and we'll delete your account within 30 days.</p>
@@ -362,6 +372,7 @@
                     <ul>
                         <li><strong>Notifications:</strong> turn them off at any time in your phone's settings.</li>
                         <li><strong>Assistant:</strong> optional. Nothing is sent to the AI service unless you ask a question.</li>
+                        <li><strong>Receipt scanning:</strong> optional. A photo is sent only when you scan a receipt; you can always add the items yourself instead.</li>
                         <li><strong>See and correct:</strong> everything you've added is visible in the app, and you can edit or delete it there.</li>
                         <li><strong>Your legal rights:</strong> under applicable law, including India's Digital Personal Data Protection Act, 2023, you can ask to access, correct or erase your personal data, or raise a complaint. <a href="#contact">Contact us</a>, and we'll reply within 30 days.</li>
                     </ul>
@@ -384,7 +395,7 @@
 
                 <section id="changes">
                     <h2>12. Changes to this policy</h2>
-                    <p>If this policy changes, we'll update the "Last Updated" date at the top of this page. For significant changes, we'll also mention it in the app's release notes on Google Play.</p>
+                    <p>If this policy changes, we'll update the "Last Updated" date at the top of this page. For significant changes, we'll also mention it in the app's release notes on Google Play and the App Store.</p>
                 </section>
 
                 <section id="contact">
