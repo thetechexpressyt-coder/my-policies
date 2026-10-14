@@ -163,11 +163,11 @@
             <div class="policy-content" style="text-align: center; margin-bottom: 50px;">
                 <img src="../assets/logo/Split Circle Logo.jpeg" alt="Split Circle Logo" style="width: 120px; height: 120px; border-radius: 30px; margin-bottom: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
                 <h1>Split Circle Privacy Policy</h1>
-                <span class="last-updated">Last Updated: October 3, 2026</span>
+                <span class="last-updated">Last Updated: October 14, 2026</span>
             </div>
 
             <div class="policy-content">
-                <p><strong>Split Circle</strong> is an app for sharing expenses with friends, family and groups, made by <strong>The Tech Express</strong> ("we", "us"). This policy explains what the app collects, why it collects it, who can see it, how long it is kept and how to delete it. It covers the Split Circle apps for Android and iPhone, and the Wear OS watch app.</p>
+                <p><strong>Split Circle</strong> is an app for sharing expenses with friends, family and groups, made by <strong>The Tech Express</strong> ("we", "us"). This policy explains what the app collects, why it collects it, who can see it, how long it is kept and how to delete it. It covers the Split Circle apps for Android and iPhone, and the Wear OS and Apple Watch apps.</p>
 
                 <h2 style="margin-top: 1rem;">The short version</h2>
                 <div class="summary-grid">
@@ -225,7 +225,8 @@
                     <h2>1. Information we collect</h2>
 
                     <h3><i class="fas fa-user-circle"></i> Your account</h3>
-                    <p>You sign in with your Google account or your Apple ID, on either app. From Google we receive your <strong>name, email address and profile picture</strong>; from Apple, your <strong>name and email address</strong>, which can be a private relay address if you choose "Hide My Email". Firebase Authentication gives your account a <strong>user ID</strong>. If you connect both ways of signing in, both lead to the same account. We never see your Google or Apple password.</p>
+                    <p>You sign in with your Google account, on either app. From Google we receive your <strong>name, email address and profile picture</strong>, and Firebase Authentication gives your account a <strong>user ID</strong>. We never see your Google password.</p>
+                    <p>Sign in with Apple isn't offered at the moment. If your account was connected to Apple before, it stays connected: from Apple we hold your <strong>name and email address</strong>, which can be a private relay address if you chose "Hide My Email", and both ways of signing in lead to the same account.</p>
 
                     <h3><i class="fas fa-wallet"></i> What you add</h3>
                     <ul>
@@ -259,7 +260,7 @@
                         <li><strong>A copy of your data for offline use</strong>, in the app's private storage. It isn't included in Android device backups, and on iPhone it's kept in the app's own storage.</li>
                         <li><strong>PDF reports</strong> you export are made on your phone and go only where you choose to share them.</li>
                         <li><strong>Daily reminders</strong> are scheduled on your phone.</li>
-                        <li><strong>Your watch.</strong> The phone sends your balances and recent activity to your paired watch over the Wear OS connection, not through our servers.</li>
+                        <li><strong>Your watch.</strong> The phone sends your balances and recent activity to your paired watch directly, not through our servers: over the Wear OS connection from Android, and over Apple's watch connection from iPhone. The watch keeps the latest copy so it can show it, and on Apple Watch so can its watch-face widget.</li>
                     </ul>
                 </section>
 
@@ -270,6 +271,7 @@
                         <li>To notify you about activity in your groups and send your daily reminder.</li>
                         <li>To answer your questions to the assistant, when you ask one.</li>
                         <li>To read a receipt you scan, when you scan one.</li>
+                        <li>To convert an amount paid in another currency into rupees, at the day's exchange rate. Our server fetches the European Central Bank's public reference rates once a day (through Frankfurter, a free rates service) and your phone downloads them from our server. Nothing about you is sent to get them.</li>
                         <li>To find and fix problems, keep the service secure, and enforce fair-use limits.</li>
                     </ul>
                     <p>We don't use your information for advertising, we don't sell it, and we don't build profiles of you.</p>
@@ -296,6 +298,7 @@
                             <tbody>
                                 <tr><td>Google Firebase and Google Cloud</td><td>Sign-in (Firebase Authentication), the database (Cloud Firestore), server functions (Cloud Functions), notifications (Firebase Cloud Messaging) and diagnostic logs (Cloud Logging)</td></tr>
                                 <tr><td>Google Play services (Android)</td><td>The on-device document scanner, which finds and straightens the bill in the camera, and the Play Store install referrer</td></tr>
+                                <tr><td>Apple (iPhone and Apple Watch)</td><td>Delivering notifications to your iPhone (Apple Push Notification service), and the connection between your iPhone and your watch</td></tr>
                                 <tr><td>OpenRouter, and the AI model hosts it uses</td><td>Answering assistant questions and reading receipts you scan, only when you do. See <a href="#assistant">section 5</a>.</td></tr>
                             </tbody>
                         </table>
@@ -316,7 +319,7 @@
                     <div class="note"><i class="fas fa-circle-info"></i>&nbsp; The summary includes your friends' names as they appear in your groups. Please don't type sensitive details, such as bank or card numbers, into the chat.</div>
 
                     <h3 id="receipts"><i class="fas fa-receipt"></i> Reading receipts</h3>
-                    <p>When you scan a receipt, the app shrinks the photo and sends it to our server, which passes it to <strong>OpenRouter</strong>. OpenRouter passes it to the company hosting the AI model, currently Google's Gemini 3.1 Flash Lite, which reads the shop name, the items and prices, the tax and the total. Both handle the request under their own privacy terms.</p>
+                    <p>When you scan a receipt, the app shrinks the photo and sends it to our server, which passes it to <strong>OpenRouter</strong>. OpenRouter passes it to the company hosting the AI model, currently Google's Gemini 3.1 Flash Lite, which reads the shop name, the currency the bill is in, the items and prices, the tax and the total. Both handle the request under their own privacy terms.</p>
                     <ul>
                         <li>Only the photo is sent: nothing about your account, your groups or other people.</li>
                         <li><strong>We don't store the photo or what was read from it on our servers</strong>, and the app deletes its copy as soon as it's read. Only the items and amounts you choose to save become an expense.</li>
@@ -364,7 +367,7 @@
                         <li>Erases your sign-in, profile, private records and settings, daily assistant and receipt-scan counts, notification tokens, email fingerprint, and the invites you created. If you sign in with Apple and delete your account from an iPhone, Split Circle also tells Apple to revoke its access to your Apple ID; from Android, you can remove it at appleid.apple.com → Sign in with Apple.</li>
                         <li>Replaces your name and picture with <strong>"Deleted user"</strong> in the groups you were part of. The expenses and payments you shared with other people remain, because their balances depend on them.</li>
                     </ul>
-                    <p>You can also delete single expenses, leave a group, or delete a group you created. If you can't get into the app, <a href="#contact">contact us</a> and we'll delete your account within 30 days.</p>
+                    <p>You can also delete single expenses, leave a group, or delete a group you created. If you can't get into the app, use the <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6dPemFchcFu86BPW-0xiMEepfMzRJ5NwZ21ewIPfllpE_dw/viewform">account deletion form</a> or <a href="#contact">contact us</a>, and we'll delete your account within 30 days.</p>
                 </section>
 
                 <section id="rights">
@@ -384,8 +387,9 @@
                         <li><strong>Internet:</strong> to sign in and sync.</li>
                         <li><strong>Notifications:</strong> for group activity and your daily reminder.</li>
                         <li><strong>Play install referrer:</strong> to open an invite link after you install.</li>
+                        <li><strong>Camera (iPhone only):</strong> asked for the first time you scan a receipt with the camera, and used only while you do.</li>
                     </ul>
-                    <p>Split Circle doesn't ask for your camera, contacts, location, files or phone. When you scan a receipt, a system screen (Google's document scanner, the photo picker, or your camera app) gives Split Circle only the one picture you choose.</p>
+                    <p>Split Circle doesn't ask for your contacts, location, files or phone, and on Android not for your camera either. When you scan a receipt, a system screen (Google's document scanner, the photo picker, or your camera app) gives Split Circle only the one picture you choose.</p>
                 </section>
 
                 <section id="children">
